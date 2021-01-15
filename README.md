@@ -62,14 +62,21 @@ int bid(int courseid, int mileage, String userId)
 
 <ErrorCode Description>     
 SUCCESS:  The bidding is successful.        
-IO_ERROR : IOException is thrown during the execution of the method.         
-OVER_MAX_MILEAGE:  The sum of previously bid mileages and the current bid mileage exceeds the maximum allowable mileage.       
-Note that the maximum mileage is defined as a static variable MAX_MILEAGE in the Config class.       
-OVER_MAX_COURSE_MILEAGE: The given mileage exceeds the maximum allowable mileage per course.       
-Note that the maximum mileage per course is defined as a static variable MAX_MILEAGE_PER_COURSE in the Config class.   
-NEGATIVE_MILEAGE : The mileage is a negative integer.       
-NO_COURSE_ID:  The given course id does not exist in the system.      
+   
+IO_ERROR : IOException is thrown during the execution of the method.        
+
+OVER_MAX_MILEAGE:  The sum of previously bid mileages and the current bid mileage exceeds the maximum allowable mileage.      
+Note that the maximum mileage is defined as a static variable MAX_MILEAGE in the Config class.     
+
+OVER_MAX_COURSE_MILEAGE: The given mileage exceeds the maximum allowable mileage per course.                    
+Note that the maximum mileage per course is defined as a static variable MAX_MILEAGE_PER_COURSE in the Config class.        
+
+NEGATIVE_MILEAGE : The mileage is a negative integer.          
+
+NO_COURSE_ID:  The given course id does not exist in the system.         
+
 USERID_NOT_FOUND : The given user id does not exist in the system.        
+
 ● The ErrorCode class (in the skeleton code) defines constant integer values matching various types of errors.     
 If no error occurs, place the bid and return SUCCESS . Otherwise, do not place the bid and return the proper error code.      
 ● When multiple errors occur, return the error code with the lowest value.      
