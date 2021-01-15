@@ -9,7 +9,7 @@ The bid amount will be decided based on how much he wishes to take the course.
 3. I implemented key functions of the course registration system as guided by the following.     
 
 
-Function 1: Search Course Information
+# Function 1: Search Course Information
 Objective: Implement the List<Course> search(Map<String,Object> searchConditions, String sortCriteria) method in the Server class.    
 Description: The method returns the list of courses matching the search conditions (given in the Map ) following the sorting criteria (given as the String ).   
 ● Inputs:       
@@ -45,7 +45,7 @@ If the academic years are equal, sort by the course id in ascending order.
 ● Outputs:        
 ○ List<Course> : The list of the class Course instances satisfying the given search condition with the elements sorted by the given criteria.    
 
-Function 2: Placing a Bid          
+# Function 2: Placing a Bid          
 Objective: Implement the following two methods in the Server class:       
 1) int bid(int courseId, int mileage, String userId)         
 2) Pair<Integer, List<Bidding>> retrieveBids(String userId)       
@@ -104,7 +104,7 @@ Pair<Integer, List<Bidding>> retrieveBids(String userId)
 ○ Pair<Integer, List<Bidding>> : The key is the error code (defined in ErrorCode class). The value is the list of previously placed bids. The list of the biddings does
 not need to be sorted.     
 
-Function 3: Confirming Bids       
+# Function 3: Confirming Bids       
 Objective: Implement the following two methods in the Server class.     
 1) boolean confirmBids()          
 2) Pair<Integer, List<Course>> retrieveRegisteredCourse(String userId)         
