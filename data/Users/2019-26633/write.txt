@@ -1,0 +1,4 @@
+3:Engineering:Computer Science & Engineering:Bachelor:2:Computer Programming:3:302-208:Youngki Lee:3
+5:Fine Arts:Crafts and Design:Bachelor:3:Design Thinking and Research:3:049-215:Annie Pedret:20
+8:Fine Arts:Crafts and Design:Master's:1:Design Studio 22:3:049-320:Annie Pedret:10
+11:Engineering:Nuclear Engineering:Bachelor:3:Introduction to Nuclear Materials:3:032-108:Youho Lee:30

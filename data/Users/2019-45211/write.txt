@@ -1,0 +1,3 @@
+3:Engineering:Computer Science & Engineering:Bachelor:2:Computer Programming:3:302-208:Youngki Lee:3
+4:Natural Sciences:Physics and Astronomy:Bachelor:1:Physics 2:3:056-321:Uwe R. Fischer:80
+11:Engineering:Nuclear Engineering:Bachelor:3:Introduction to Nuclear Materials:3:032-108:Youho Lee:30
