@@ -120,7 +120,6 @@ public class Server {
                 } else {
                     return 1;
                 }
-
             }
         });
         return newCourses;
@@ -128,22 +127,17 @@ public class Server {
 
 
     public List<Course> search(Map<String, Object> searchConditions, String sortCriteria) {
-        // TODO Problem 2-1
         courseArray=new ArrayList<>();
         File[] directory = new File("data/Courses/2020_Spring").listFiles();
         String courseID;
         String[] coursedetail;
         if (directory!=null){
         for (File adirectory : directory) {
-
             File[] realfile = adirectory.listFiles();
             String depa = adirectory.getName();
             for (File eachfile : realfile) {
-
-
                 String content = "";
                 courseID = eachfile.getName();
-
                 try (FileInputStream fis = new FileInputStream(eachfile.getPath())) {
                     int i;
                     while ((i = fis.read()) != -1) {
@@ -200,9 +194,7 @@ public class Server {
             String namelist = ((String) searchConditions.get("name"));
             String[] namearray = namelist.trim().split(" ");
             ArrayList<Course> tmplist = new ArrayList<Course>(selectedCourse);
-
             for (int k = 0; k < selectedCourse.size(); k++) {
-
                 Course course = selectedCourse.get(k);
 
                 String[] names = course.courseName.trim().split(" ");
@@ -231,9 +223,7 @@ public class Server {
     }
 
     public int bid(int courseId, int mileage, String userId) {
-        // TODO Problem 2-2
         search(null, null);
-
         Pair<Integer, List<Bidding>> a = retrieveBids(userId);
         ArrayList<Bidding> alreadyBid = new ArrayList<>(a.value);
         if (a.key == -61) {
@@ -276,8 +266,6 @@ public class Server {
                 alreadyBid.add(new Bidding(courseId, mileage));
             }
         }
-
-
         int sum = 0;
         for (Bidding bid : alreadyBid) {
             sum += bid.mileage;
@@ -312,7 +300,6 @@ public class Server {
             writer.write(somethingWrite);
         } catch (FileNotFoundException e) {
 
-
         } catch (IOException e) {
 
         } finally {
@@ -328,7 +315,6 @@ public class Server {
 
     public Pair<Integer, List<Bidding>> retrieveBids(String userId) {
         String content = "";
-        // TODO Problem 2-2
         FileInputStream fis = null;
         try {
             ArrayList<Bidding> biddinglist = new ArrayList<>();
@@ -370,15 +356,12 @@ public class Server {
             } catch (IOException e) {
 
             }
-
-
         }
 
     }
 
 
     public boolean confirmBids() {
-        // TODO Problem 2-3
         ArrayList<User> users = new ArrayList<>();
         search(null, null);
         File[] Directory = new File("data/Users/").listFiles();
@@ -594,8 +577,6 @@ boolean Ifoundit=false;
     }
 
     public Pair<Integer, List<Course>> retrieveRegisteredCourse(String userId) {
-        // TODO Problem 2-3
-
 
         boolean userFound = false;
         ArrayList<User> users = new ArrayList<>();
